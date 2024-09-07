@@ -30,6 +30,10 @@ function Signup() {
           // alert("Signup Successfully");
           toast.success("Signup Successfully");
           navigate(from, { replace: true });
+          setTimeout(() => {
+            window.location.reload();
+            // localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 1000);
         }
         localStorage.setItem("Users", JSON.stringify(res.data.user));
       })
